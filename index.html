@@ -1,15 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CEGTWJZLXY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CEGTWJZLXY');
+</script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conference Room Reservation at Moog NV</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+ 
+    </style>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <h1>Conference Room Reservation at Moog NV</h1>
 
     <form id="conferenceRoomReservationForm" onsubmit="composeEmail(); return false;">
-        <!-- Title -->
+   
         <fieldset>
             <legend><h4>Title</h4></legend>
             <div>
@@ -22,7 +38,7 @@
                         
         </fieldset>
 
-        <!-- Number of People -->
+      
         <fieldset>
             <legend><h4>Number of People</h4></legend>
             <div>
@@ -31,7 +47,7 @@
             </div>
         </fieldset>
 
-        <!-- Date and Start/End Time -->
+        
         <fieldset>
     <legend><h4>Date and Start/End Time</h4></legend>
     <table>
@@ -50,7 +66,7 @@
     </table>
 </fieldset>
 
-        <!-- Equipment Requirements -->
+       
       <fieldset>
     <legend><h4>Equipment Requirements</h4></legend>
     <table>
@@ -116,7 +132,7 @@
 
 
 
-        <!-- Lunch -->
+      
 <fieldset>
     <legend><h4>Lunch</h4></legend>
     <table>
@@ -142,7 +158,7 @@
 
 
 
-        <!-- Cost Center -->
+        
         <fieldset>
     <legend><h4>Cost Center</h4></legend>
     <table>
@@ -196,7 +212,7 @@
         
       
 
-        <!-- Submit Button -->
+       
         <button type="submit">Submit Reservation</button>
     </form>
     
