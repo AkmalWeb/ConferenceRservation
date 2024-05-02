@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conference Room Reservation at Moog NV</title>
+</head>
+<body>
+    <h1>Conference Room Reservation at Moog NV</h1>
+
+    <form id="conferenceRoomReservationForm" onsubmit="composeEmail(); return false;">
+        <!-- Title -->
+        <fieldset>
+            <legend><h4>Title</h4></legend>
+            <div>
+                <label for="title">Title:</label>
+                <input type="text" id="title" required placeholder="Team meeting">
+                <label for="title">Host:</label>
+                <input type="text" id="host" required placeholder="Host or your name">
+            </div>
+            
+                        
+        </fieldset>
+
+        <!-- Number of People -->
+        <fieldset>
+            <legend><h4>Number of People</h4></legend>
+            <div>
+                <label for="numberOfPeople">How many people?</label>
+                <input type="number" value="0" id="numberOfPeople" required min="1" max="20">
+            </div>
+        </fieldset>
+
+        <!-- Date and Start/End Time -->
+        <fieldset>
+    <legend><h4>Date and Start/End Time</h4></legend>
+    <table>
+        <tr>
+            <td><label for="reservationDate">Date:</label></td>
+            <td><input type="date" id="reservationDate" required min="2024-01-01" max="2025-12-31"></td>
+        </tr>
+        <tr>
+            <td><label for="startTime">Start Time:</label></td>
+            <td><input type="time" id="startTime" required></td>
+        </tr>
+        <tr>
+            <td><label for="endTime">End Time:</label></td>
+            <td><input type="time" id="endTime" required></td>
+        </tr>
+    </table>
+</fieldset>
+
+        <!-- Equipment Requirements -->
+      <fieldset>
+    <legend><h4>Equipment Requirements</h4></legend>
+    <table>
+    <tr>
+        <td><label for="projectorRequired">Projector</label></td>
+        <td>
+            <select id="projectorRequired" required>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+                <option value="N/A">N/A</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td><label for="webcamRequired">Webcam</label></td>
+        <td>
+            <select id="webcamRequired" required>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+                <option value="N/A">N/A</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td><label for="whiteboardRequired">Whiteboard</label></td>
+        <td>
+            <select id="whiteboardRequired" required>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+                <option value="N/A">N/A</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td><label for="dockingStationRequired">Docking Station</label></td>
+        <td>
+            <select id="dockingStationRequired" required>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+                <option value="N/A">N/A</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td><label for="paperNoteRequired">Paper Note</label></td>
+        <td>
+            <select id="paperNoteRequired" required>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+                <option value="N/A">N/A</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td><label for="otherRequests">Other requests?</label></td><br>
+        <td>
+            <textarea id="otherRequests" rows="4" cols="50" placeholder="Optional: speakers, microphone, more chairs. etc."></textarea>
+        </td>
+    </tr>
+</table>
+
+</fieldset>
+
+
+
+        <!-- Lunch -->
+<fieldset>
+    <legend><h4>Lunch</h4></legend>
+    <table>
+        <tr>
+            <td><label for="lunchRequired">Lunch?</label></td>
+            <td>
+                <select id="lunchRequired" required>
+                    <option value="yes">Yes</option>
+                    <option value="no" selected>No</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="numberOfLunchPeople">How many people?</label></td>
+            <td><input type="number" value="0" id="numberOfLunchPeople" required min="0" max="20"></td>
+        </tr>
+        <tr>
+            <td><label for="preferences">Lunch Preferences:</label></td>
+            <td><textarea id="preferences" rows="2" cols="50" placeholder="Optional: vegi, bittergarnituur. etc."></textarea></td>
+        </tr>
+    </table>
+</fieldset>
+
+
+
+        <!-- Cost Center -->
+        <fieldset>
+    <legend><h4>Cost Center</h4></legend>
+    <table>
+        <tr>
+            <td><label for="costCenter">Cost Center:</label></td>
+            <td>
+                <select id="costCenter" required>
+                   <option value="" selected disabled>Choose your dept.</option>
+    <option value="8006500">8006500 Appl. Eng. Sim & Test</option>
+	<option value="8006550">8006550 Appl. Eng. Sim & Test US</option>
+    <option value="8001100">8001100 Assembly & Test</option>
+    <option value="8021300">8021300 Bus. Dev. Sim & Test Europe</option>
+    <option value="8034400">8034400 Contracts Administration</option>
+    <option value="8032100">8032100 Finance and Administration</option>
+    <option value="8034200">8034200 Front Office</option>
+    <option value="8034100">8034100 Gen Allocation</option>
+    <option value="8034300">8034300 General Management MNV</option>
+    <option value="8035200">8035200 Global SAP Process Management</option>
+    <option value="8021100">8021100 GVP EHPS</option>
+    <option value="8031100">8031100 Human Resources</option>
+    <option value="8033200">8033200 IT Administration</option>
+    <option value="8033100">8033100 IT Infrastructure</option>
+    <option value="8002200">8002200 Logistics</option>
+    <option value="8006800">8006800 M3 Engineering</option>
+    <option value="8006900">8006900 M3 Program Management</option>
+    <option value="8012400">8012400 M3 Strategic</option>
+    <option value="8006100">8006100 Management Engineering MNV</option>
+    <option value="8006200">8006200 Mechanical Design</option>
+    <option value="8002100">8002100 Production Eng. Sim & Test</option>
+    <option value="8006600">8006600 Program Management Sim & Test</option>
+    <option value="8035100">8035100 Project Management Backb.</option>
+    <option value="8006700">8006700 Project Management Sim & Test</option>
+    <option value="8003100">8003100 Quality Assurance</option>
+    <option value="8006350">8006350 Software Engineerin Aircraft</option>
+    <option value="8006400">8006400 Software Engineering Sim &Test</option>
+    <option value="8005100">8005100 Supply Chain</option>
+    <option value="8006300">8006300 System & Electr Eng Sim & Test</option>
+    <option value="8004100">8004100 Technical Services EMEA</option>
+    <option value="8034900">8034900 Trade Compliance</option>
+    <option value="8035300">8035300 Transform. Office</option>
+	<option value="1234567">1234567 Marketing</option>
+                </select>
+            </div>
+        </fieldset>
+                </select>
+            </td>
+        </tr>
+    </table>
+</fieldset>
+
+        
+      
+
+        <!-- Submit Button -->
+        <button type="submit">Submit Reservation</button>
+    </form>
+    
+    <script>
+        function composeEmail() {
+            const title = document.getElementById('title').value;
+            const host = document.getElementById('host').value;
+            const numberOfPeople = document.getElementById('numberOfPeople').value;
+            const reservationDate = document.getElementById('reservationDate').value;
+            const startTime = document.getElementById('startTime').value;
+            const endTime = document.getElementById('endTime').value;
+            
+            const projectorRequired = document.getElementById('projectorRequired').value;
+            const webcamRequired = document.getElementById('webcamRequired').value;
+            const whiteboardRequired = document.getElementById('whiteboardRequired').value;
+     		const dockingStationRequired = document.getElementById('dockingStationRequired').value;
+     		const paperNoteRequired = document.getElementById('paperNoteRequired').value;
+            
+            const lunchRequired = document.getElementById('lunchRequired').value;
+            const numberOfLunchPeople = document.getElementById('numberOfLunchPeople').value;
+            const preferences = document.getElementById('preferences').value;
+            const costCenter = document.getElementById('costCenter').value;
+
+            const subject = `Conference Room Reservation: ${reservationDate}`;
+            let body = `Conference Room Reservation Details:\n\n` +
+                       `Title: ${title}\n\n` +
+                        `Host: ${host}\n` + 
+                       `Number of People: ${numberOfPeople}\n\n` +
+                       `Date: ${reservationDate}\n` +
+                       `Start Time: ${startTime}\t` +
+                       `End Time: ${endTime}\n\n`+
+                       
+                       `Projector Required: ${projectorRequired}\n` +
+                       `Paper Note Required: ${paperNoteRequired}\n` +
+                       `Whiteboard Required: ${whiteboardRequired}\n` +
+                       `Docking Station Required: ${dockingStationRequired}\n` +
+                       `Webcam Required: ${webcamRequired}\n\n` +
+                       
+                       `Lunch Required: ${lunchRequired}\n` +
+                       `Number of People for Lunch: ${numberOfLunchPeople}\n` +
+                       `Preferences: ${preferences}\n\n` +
+                       `Cost Center: ${costCenter}`;
+
+            const mailtoURL = `mailto:travel_nl@moog.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            window.location.href = mailtoURL;
+        }
+    </script>
+</body>
+</html>
