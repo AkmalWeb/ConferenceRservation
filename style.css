@@ -1,0 +1,80 @@
+/* Reset default margin and padding */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #E5E0D7;
+}
+/* Center the page content */
+.container {
+  width: 80%;
+  margin: 0 auto; /* Center the container horizontally */
+}
+
+/* Set font to Roboto with size 15px */
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+}
+
+/* Style headings */
+h1, h3, h4, h5 {
+  margin: 5px auto; /* Center headings */
+  text-align: center;
+}
+
+/* Style input fields */
+input {
+  border: 1px solid #888;
+  background-color: #FFFFFF;
+  font-size: 15px;
+  color: #555;
+}
+
+/* Add asterisk to required labels */
+label.required::after {
+  content: "*";
+  color: Maroon;
+}
+/* Center the page content */
+.container {
+  width: 0%;
+  margin: 0 auto; /* Center the container horizontally */
+}
+
+/* Center the fieldset */
+fieldset {
+  margin: 0 auto; /* Center the fieldset horizontally */
+  width: 80%; /* Set the width of the fieldset */
+}
+
+/* Set font to Roboto with size 15px */
+body {
+  font-family: 'Roboto', Roboto;
+  font-size: 15px;
+}
+button {
+  background-color: #add8e6;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0c47a1; 
+}
+
+#sendEmailButton {
+ background-color: #32cd32;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
