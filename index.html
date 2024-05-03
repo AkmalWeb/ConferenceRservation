@@ -237,9 +237,10 @@
             const costCenter = document.getElementById('costCenter').value;
 
             const subject = `Conference Room Reservation: ${reservationDate}`;
-            let body = `Hello Front desk team, I would like to make a reservation of the conference room.:\n\n` + 
+            let body = `Hello Front desk team, \n` + 
+		    `I would like to make a reservation of the conference room.\n\n` + 
 		    `Conference Room Reservation Details:\n\n` +
-                       `Title: ${title}\n\n` +
+                       `Meeting Title: ${title}\n\n` +
                         `Host: ${host}\n` + 
                        `Number of People: ${numberOfPeople}\n\n` +
                        `Date: ${reservationDate}\n` +
