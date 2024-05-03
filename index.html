@@ -237,7 +237,8 @@
             const costCenter = document.getElementById('costCenter').value;
 
             const subject = `Conference Room Reservation: ${reservationDate}`;
-            let body = `Conference Room Reservation Details:\n\n` +
+            let body = `Hello Front desk team, I would like to make a reservation of the conference room.:\n\n` + 
+		    `Conference Room Reservation Details:\n\n` +
                        `Title: ${title}\n\n` +
                         `Host: ${host}\n` + 
                        `Number of People: ${numberOfPeople}\n\n` +
@@ -254,9 +255,10 @@
                        `Lunch Required: ${lunchRequired}\n` +
                        `Number of People for Lunch: ${numberOfLunchPeople}\n` +
                        `Preferences: ${preferences}\n\n` +
-                       `Cost Center: ${costCenter}`;
+		    	`Cost Center: ${costCenter}\n\n` +
+                       `Could you please respond to my email with room number and confirmation? Thank you.`;
 
-            const mailtoURL = `mailto:travel_nl@moog.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            const mailtoURL = `mailto:mfrontdesk@moog.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
             window.location.href = mailtoURL;
         }
     </script>
